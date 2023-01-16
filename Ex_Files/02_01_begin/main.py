@@ -1,11 +1,11 @@
 RUN_INDENTED = True
 
-message = "running unindented"
+MESSAGE = "running unindented"
 
 if RUN_INDENTED:
-    message = "running indented"
+    MESSAGE = "running indented"
 
-print(message)
+print(MESSAGE)
 
 
 def my_function():

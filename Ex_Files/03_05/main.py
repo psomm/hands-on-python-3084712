@@ -34,5 +34,5 @@ for lareate in laureates:
         laureates_beginning_with_a.append(lareate)
 
 
-with open("laureates.json", "w") as f:
+with open("laureates.json", "w", encoding='utf8') as f:
     json.dump(laureates_beginning_with_a, f, indent=2)

@@ -2,7 +2,8 @@ import csv
 from datetime import datetime
 from pprint import pprint
 
-EINSTEIN_CSV = 'Albert,Einstein,1879-03-14,1955-04-18,Germany,"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect",physics,1921'
+EINSTEIN_CSV = 'Albert,Einstein,1879-03-14,1955-04-18,Germany,\
+    "for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect",physics,1921'
 
 EINSTEIN = {
     "birthplace": "Germany",
@@ -13,7 +14,7 @@ EINSTEIN = {
     "motivation": "for his services to Theoretical Physics...",
 }
 
-with open("laureates.csv", "r") as f:
+with open("laureates.csv", "r", encoding='utf8') as f:
     reader = csv.DictReader(f)
     laureates = list(reader)
 
